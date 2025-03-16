@@ -108,6 +108,6 @@ app.post("/user/login",  async (req, res) => {
 })
 //このサーバが起動するポートを3000指定
 const port = process.env.PORT ||3001;
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("listening localhost port 3000")
 })
