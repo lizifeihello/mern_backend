@@ -32,7 +32,7 @@ app.post("/item/create", auth, async (req, res) => {
     }
 })
 //find method
-app.get("/", auth, async (req, res) => {
+app.get("/", async (req, res) => {
     try {
         await connectDB();
         const allItems = await itemModel.find();
@@ -73,7 +73,7 @@ app.delete("/item/delete/:id", auth, async (req, res) => {
     }
 })
 //register
-app.post("/user/register", auth, async (req, res) => {
+app.post("/user/register", async (req, res) => {
     try {
         await connectDB();
         await userModel.create({
@@ -107,7 +107,7 @@ app.post("/user/login",  async (req, res) => {
     }
 })
 //このサーバが起動するポートを3000指定
-const port = process.env.PORT ||3000;
+const port = process.env.PORT ||3001;
 app.listen(3000, () => {
     console.log("listening localhost port 3000")
 })
