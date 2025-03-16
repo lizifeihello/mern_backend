@@ -32,7 +32,7 @@ app.post("/item/create", auth, async (req, res) => {
     }
 })
 //find method
-app.get("/", auth, async (req, res) => {
+app.get("/", async (req, res) => {
     try {
         await connectDB();
         const allItems = await itemModel.find();
