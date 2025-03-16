@@ -110,5 +110,5 @@ app.post("/user/login",  async (req, res) => {
 //process.env.PORTは、環境変数PORTが設定されている場合はその値を使い、設定されていない場合は3001を使う
 const port = process.env.PORT ||3001;
 app.listen(port, () => {
-    console.log("listening localhost port 3000")
+    console.log("listening localhost port 3001")
 })
